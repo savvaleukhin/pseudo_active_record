@@ -22,7 +22,6 @@ end
 article1 = Article.create(:title => "A great article",
                           :body  => "Short but sweet!")
 
-p article1
 Comment.create(:body => "Supportive comment!", :article_id => article1.id)
 Comment.create(:body => "Friendly comment!",   :article_id => article1.id)
 

@@ -1,3 +1,5 @@
+require_relative "../lib/pseudo_active_record"
+
 describe PseudoActiveRecord::Table do
   let(:table) { PseudoActiveRecord::Table.new(name: "articles") }
   let(:db) { PStore.new("articles.pstore") }
@@ -29,6 +31,9 @@ describe PseudoActiveRecord::Table do
   end
 
   it 'can update a row' do
-    
+    params = { title: "Article 1", body: "Body of article 1" }
+
+    article = table.insert(params)
+    table.update
   end
 end
